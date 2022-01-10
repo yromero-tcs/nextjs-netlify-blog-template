@@ -1,6 +1,6 @@
 import Head from "next/head"
 import { Component } from 'react'
-import { attributes, react as Part1Content } from '../content/part1/part1.md';
+import { attributes, react as Part1Content } from '../content/en/part1/part1.md';
 
 export default class Part1 extends Component {
   render() {

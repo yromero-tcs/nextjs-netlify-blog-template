@@ -1,5 +1,5 @@
 ---
-title: "Part1"
+title: "Part 1"
 attrs:
   - name: "Red"
     tooltip: "Red is a primary color"

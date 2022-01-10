@@ -6,6 +6,10 @@ publish_mode: editorial_workflow
 # This line should *not* be indented
 media_folder: "public/assets" # Media files will be stored in the repo under public/assets
 public_folder: "/assets"
+i18n:
+  structure: multiple_folders
+  locales: [en, es]
+  default_locale: en
 collections:
   - name: "part1"
     label: "Part 1"
