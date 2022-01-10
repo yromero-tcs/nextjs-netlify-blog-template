@@ -1,0 +1,20 @@
+services:
+# - type: web
+#   name: poc-nextjs
+#   env: node
+#   plan: starter
+#   buildCommand: npm i; npm run build
+#   startCommand: npm start
+#   envVars:
+#   - key: NODE_ENV
+#     value: production
+# Uncomment the following to deploy this app as a static site on render
+- type: web
+  name: poc-nextjs
+  env: static
+  buildCommand: npm i; npm run build; npm run export
+  staticPublishPath: out
+  pullRequestPreviewsEnabled: true     # optional
+  envVars:
+  - key: NODE_ENV
+    value: production
