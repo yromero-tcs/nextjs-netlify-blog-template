@@ -11,11 +11,12 @@ collections:
     label: "Part 1"
     folder: "content/part1"
     create: true
+    slug: {{slug}}
     fields:
       - { label: "title", name: "title", widget: "string" }
       - { label: "body", name: "body", widget: "markdown" }
-      - label: "attributes"
-        name: "attributes"
+      - label: "attrs"
+        name: "attrs"
         widget: list
         fields:
           - { label: "name", name: "name", widget: "string" }
