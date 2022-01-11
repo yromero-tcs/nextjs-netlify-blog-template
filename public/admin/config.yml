@@ -22,6 +22,7 @@ collections:
       - label: "attrs"
         name: "attrs"
         widget: list
+        i18n: true
         fields:
           - { label: "name", name: "name", widget: "string", i18n: true }
           - { label: "tooltip", name: "tooltip", widget: "text", i18n: true }
