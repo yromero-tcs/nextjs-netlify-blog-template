@@ -7,7 +7,7 @@ publish_mode: editorial_workflow
 media_folder: "public/assets" # Media files will be stored in the repo under public/assets
 public_folder: "/assets"
 i18n:
-  structure: multiple_folders
+  structure: multiple_files
   locales: [en, es]
   default_locale: en
 collections:
@@ -15,14 +15,13 @@ collections:
     label: "Part 1"
     folder: "content/part1"
     create: true
-    slug: '{{slug}}'
     i18n: true
     fields:
-      - { label: "title", name: "title", widget: "string" }
-      - { label: "body", name: "body", widget: "markdown" }
+      - { label: "title", name: "title", widget: "string", i18n: true }
+      - { label: "body", name: "body", widget: "markdown", i18n: true }
       - label: "attrs"
         name: "attrs"
         widget: list
         fields:
-          - { label: "name", name: "name", widget: "string" }
-          - { label: "tooltip", name: "tooltip", widget: "text"}
+          - { label: "name", name: "name", widget: "string", i18n: true }
+          - { label: "tooltip", name: "tooltip", widget: "text", i18n: true }
