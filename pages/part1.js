@@ -4,7 +4,7 @@ import { attributes, react as Part1Content } from '../content/part1/part1.en.md'
 
 export default class Part1 extends Component {
   render() {
-    let { title, attrs } = attributes;
+    let { title } = attributes;
     return (
       <>
         <Head>
@@ -13,14 +13,6 @@ export default class Part1 extends Component {
         <article>
           <h1>{title}</h1>
           <Part1Content />
-          <ul>
-            {attrs.map((attr, k) => (
-              <li key={k}>
-                <h2>{attr.name}</h2>
-                <p>{attr.tooltip}</p>
-              </li>
-            ))}
-          </ul>
         </article>
       </>
     )
