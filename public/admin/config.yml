@@ -11,6 +11,15 @@ i18n:
   locales: [en, es]
   default_locale: en
 collections:
+  - name: "attribute"
+    label: "Attribute"
+    folder: "content/attributes"
+    create: true
+    i18n: true
+    fields: 
+      - { label: "name", name: "name", widget: "string", i18n: true }
+      - { label: "displayName", name: "displayName", widget: "string", i18n: true}
+      - { label: "tooltip", name: "tooltip", widget: text, i18n: true }
   - name: "part1"
     label: "Part 1"
     folder: "content/part1"
@@ -19,10 +28,10 @@ collections:
     fields:
       - { label: "title", name: "title", widget: "string", i18n: true }
       - { label: "body", name: "body", widget: "markdown", i18n: true }
-      - label: "attrs"
-        name: "attrs"
-        widget: list
-        i18n: true
-        fields:
-          - { label: "name", name: "name", widget: "string", i18n: true }
-          - { label: "tooltip", name: "tooltip", widget: "text", i18n: true }
+      - label: "Attribute"
+        name: "attribute"
+        widget: "relation"
+        collection: "attribute"
+        search_fields: ["attribute.name", "attribute.displayName"]
+        value_field: "attribute.name"
+        display_fields: ["attribute.name", "attribute.displayName"]
