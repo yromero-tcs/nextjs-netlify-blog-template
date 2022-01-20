@@ -53,7 +53,7 @@ collections:
       - { label: "title", name: "title", widget: "string", i18n: true }
       - { label: "body", name: "body", widget: "markdown", i18n: true }
       - label: "Attributes"
-        name: "attributes"
+        name: "attrs"
         widget: "list"
         i18n: true
         fields:

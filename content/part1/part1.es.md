@@ -1,6 +1,6 @@
 ---
 title: Parte 1
-attributes:
+attrs:
   - Attribute: color
   - Attribute: size
 ---
