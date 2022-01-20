@@ -32,6 +32,6 @@ collections:
         name: "attribute"
         widget: "relation"
         collection: "attribute"
-        search_fields: ["attribute.name", "attribute.displayName"]
-        value_field: "attribute.name"
-        display_fields: ["attribute.name", "attribute.displayName"]
+        search_fields: ["name", "displayName"]
+        value_field: "name"
+        display_fields: ["name", "displayName"]
