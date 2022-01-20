@@ -7,6 +7,7 @@ attrs:
     tooltip: El azul es un color primario
   - name: Morado
     tooltip: Morado es una mezcla de azul y rojo
+attribute: color
 ---
 
 Este es el contenido de la parte 1.
