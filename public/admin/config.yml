@@ -1,5 +1,5 @@
 backend:
-  name: git-gateway
+  name: test-repo
   branch: master # Branch to update (optional; defaults to master)
 # This line should *not* be indented
 publish_mode: editorial_workflow
@@ -11,6 +11,15 @@ i18n:
   locales: [en, es]
   default_locale: en
 collections:
+  - name: "level"
+    label: "Level"
+    folder: "content/levels"
+    create: true
+    i18n: true
+    fields:
+      - { label: "name", name: "name", widget: "string", i18n: true }
+      - { label: "displayName", name: "displayName", widget: "string", i18n: true}
+      - { label: "tooltip", name: "tooltip", widget: text, i18n: true }
   - name: "attribute"
     label: "Attribute"
     folder: "content/attributes"
@@ -20,6 +29,19 @@ collections:
       - { label: "name", name: "name", widget: "string", i18n: true }
       - { label: "displayName", name: "displayName", widget: "string", i18n: true}
       - { label: "tooltip", name: "tooltip", widget: text, i18n: true }
+      - label: "Levels"
+        name: "levels"
+        widget: "list"
+        i18n: true
+        fields: 
+          - label: "Level"
+            name: "level"
+            widget: "relation"
+            collection: "level"
+            search_fields: ["name", "displayName"]
+            value_field: "name"
+            display_fields: ["displayName"]
+            i18n: true
   - name: "part1"
     label: "Part 1"
     folder: "content/part1"
@@ -31,6 +53,7 @@ collections:
       - label: "Attributes"
         name: "attributes"
         widget: "list"
+        i18n: true
         fields:
           - label: "Attribute"
             name: "Attribute"
@@ -39,3 +62,4 @@ collections:
             search_fields: ["name", "displayName"]
             value_field: "name"
             display_fields: ["displayName"]
+            i18n: true
