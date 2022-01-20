@@ -13,7 +13,9 @@ i18n:
 collections:
   - name: "level"
     label: "Level"
-    folder: "content/levels/{{name}}"
+    folder: "content/levels"
+    nested:
+      depth: 5
     create: true
     i18n: true
     fields:
