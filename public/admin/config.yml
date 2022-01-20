@@ -1,5 +1,5 @@
 backend:
-  name: git-gateway
+  name: test-repo
   branch: master # Branch to update (optional; defaults to master)
 # This line should *not* be indented
 publish_mode: editorial_workflow
@@ -28,10 +28,14 @@ collections:
     fields:
       - { label: "title", name: "title", widget: "string", i18n: true }
       - { label: "body", name: "body", widget: "markdown", i18n: true }
-      - label: "Attribute"
-        name: "attribute"
-        widget: "relation"
-        collection: "attribute"
-        search_fields: ["name", "displayName"]
-        value_field: "name"
-        display_fields: ["name", "displayName"]
+      - label: "Attributes"
+        name: "attributes"
+        widget: "list"
+        fields:
+          - label: "Attribute"
+            name: "Attribute"
+            widget: "relation"
+            collection: "attribute"
+            search_fields: ["name", "displayName"]
+            value_field: "name"
+            display_fields: ["displayName"]
