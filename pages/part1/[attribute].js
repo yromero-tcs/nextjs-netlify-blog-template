@@ -1,4 +1,3 @@
-import Head from "next/head"
 import { attributes, react as Part1Content } from '../../content/part1/part1.en.md';
 import { useEffect, useState } from 'react';
 
@@ -9,20 +8,15 @@ const Part1Page = (props) => {
   const { title } = attributes;
 
   return (
-    <>
-      <Head>
-        <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-      </Head>
-      <article>
-        <h1>{title}</h1>
-        <Part1Content />
-        <h2>{displayName}</h2>
-        <h3>{tooltip}</h3>
-        {levels.map((level) => {
-          return <Level name={name} levelName={level.level}/>
-        })}
-      </article>
-    </>
+    <article>
+      <h1>{title}</h1>
+      <Part1Content />
+      <h2>{displayName}</h2>
+      <h3>{tooltip}</h3>
+      {levels.map((level) => {
+        return <Level name={name} levelName={level.level}/>
+      })}
+    </article>
   )
 }
 

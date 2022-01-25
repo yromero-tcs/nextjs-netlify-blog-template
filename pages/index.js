@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import Head from "next/head"
 
 const glob = require('glob');
 
@@ -6,6 +7,10 @@ const Index = (props) => {
   const { paths, names } = props;
   
   return ( 
+    <>
+    <Head>
+        <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+    </Head>
     <div>
       Hello World.{' '} <br/>
       <Link href="/about">
@@ -21,6 +26,7 @@ const Index = (props) => {
         </div>
       })}
     </div>
+    </>
   )
 }
 
