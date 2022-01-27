@@ -4,5 +4,5 @@ displayName: Blue
 tooltip: |-
   This is the color blue (modified).
 
-  Updating the content again.
+  Updating the content again...
 ---
