@@ -1,5 +1,5 @@
 ---
-name: "blue"
-displayName: "Blue"
-tooltip: This is the color blue.
+name: blue
+displayName: Blue
+tooltip: This is the color blue (modified).
 ---
