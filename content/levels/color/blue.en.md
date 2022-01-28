@@ -2,7 +2,7 @@
 name: blue
 displayName: Blue
 tooltip: |-
-  This is the color blue (modified).
+  This is the color blue.
 
-  Updating the content again...
+  The sky is the color blue.
 ---

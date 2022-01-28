@@ -1,8 +1,8 @@
 ---
 name: blue
 displayName: Azul
-tooltip: |
-  Este es el color azul (modificado).
+tooltip: |-
+  Este es el color azul.
 
-  Actualizando el contenido otra vez...
+  El cielo es de color azul.
 ---
