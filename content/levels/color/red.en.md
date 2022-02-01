@@ -1,5 +1,8 @@
 ---
 name: red
 displayName: Red
-tooltip: This is the color red (modified).
+tooltip: |-
+  This is the color red (modified).
+
+  Test workflow.
 ---
