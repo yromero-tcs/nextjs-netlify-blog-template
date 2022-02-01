@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "export": "next build && next export -o ./dist",
-    "copy": "xcopy README.md test-folder"
+    "copy": "rsync -avd README.md test-folder"
   },
   "dependencies": {
     "next": "^12.0.7",
