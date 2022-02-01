@@ -1,5 +1,8 @@
 ---
-name: "small"
-displayName: "Small"
-tooltip: This is small size.
+name: small
+displayName: Small
+tooltip: |-
+  This is small size.
+
+  Test workflow.
 ---
