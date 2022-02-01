@@ -8,7 +8,7 @@ on:
       - 'content/**/**'
 defaults:
   run:
-    working-directory: '/'
+    working-directory: './'
 jobs:
   copy_file:
     runs-on: ubuntu-latest
