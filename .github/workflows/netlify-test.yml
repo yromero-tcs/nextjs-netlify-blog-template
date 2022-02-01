@@ -1,0 +1,56 @@
+name: Netlify CMS Test
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'content/**'
+defaults:
+  run:
+    working-directory: '/'
+jobs:
+  copy_file:
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [12.x]
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v2
+      with:
+        node-version: ${{ matrix.node-version }}
+        registry-url: "https://npm.pkg.github.com"
+        scope: "@truechoice-solutions"
+
+    - name: Install
+      run: npm ci
+
+    - name: Copy
+      run: xcopy README.md test-folder
+  notify_slack_success:
+    runs-on: ubuntu-latest
+    needs: [copy_file]
+    if: success()
+    steps:
+      - name: Notify build success
+        uses: rtCamp/action-slack-notify@v2
+        env:
+          SLACK_CHANNEL: integration_tests
+          SLACK_COLOR: good
+          SLACK_USERNAME: Github Actions Platform
+          SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
+  notify_slack_failure:
+    runs-on: ubuntu-latest
+    needs: [copy_file]
+    if: failure()
+    steps:
+      - name: Notify build failure
+        uses: rtCamp/action-slack-notify@v2
+        env:
+          SLACK_CHANNEL: integration_tests
+          SLACK_COLOR: '#FF0000'
+          SLACK_USERNAME: Github Actions Platform
+          SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}

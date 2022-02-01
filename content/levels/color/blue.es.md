@@ -1,8 +1,8 @@
 ---
 name: blue
 displayName: Azul
-tooltip: |
-  Este es el color azul (modificado).
+tooltip: |-
+  Este es el color azul.
 
-  Actualización del contenido dentro de la rama dev.
+  El cielo es de color azul.
 ---

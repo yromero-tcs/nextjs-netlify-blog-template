@@ -2,7 +2,7 @@
 name: blue
 displayName: Blue
 tooltip: |-
-  This is the color blue (modified).
+  This is the color blue.
 
-  Updating the content within the dev branch.
+  The sky is the color blue.
 ---
